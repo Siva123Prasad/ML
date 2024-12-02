@@ -220,15 +220,15 @@ label = 'FARE'
 
 model_1 = run_experiment(training_df, features, label, learning_rate, epochs, batch_size)
 
-learning_rate = 0.001
-epochs = 20
-batch_size = 50
+# learning_rate = 0.001
+# epochs = 20
+# batch_size = 50
 
-# Specify the feature and the label.
-features = ['TRIP_MILES']
-label = 'FARE'
+# # Specify the feature and the label.
+# features = ['TRIP_MILES']
+# label = 'FARE'
 
-model_1 = run_experiment(training_df, features, label, learning_rate, epochs, batch_size)
+# model_1 = run_experiment(training_df, features, label, learning_rate, epochs, batch_size)
 
 learning_rate = 0.001
 epochs = 20
