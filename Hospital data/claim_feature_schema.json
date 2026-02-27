@@ -1,0 +1,1 @@
+{"model_name": "Claim Outcome Classification", "features": ["billed_amount", "provider_rejection_rate", "high_billed_flag", "department_enc", "insurance_provider_enc", "visit_type_enc", "age", "length_of_stay_hours", "chronic_flag"], "target_mapping": {"0": "Paid", "1": "Pending", "2": "Rejected"}}

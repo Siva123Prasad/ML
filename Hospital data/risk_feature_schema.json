@@ -1,0 +1,1 @@
+{"model_name": "Visit Risk Classification", "features": ["age", "length_of_stay_hours", "visit_frequency", "avg_los_per_patient", "days_since_registration", "visit_month", "visit_dayofweek", "chronic_flag", "department_enc", "visit_type_enc", "gender_enc", "city_enc"], "target_mapping": {"0": "High", "1": "Low", "2": "Medium"}}

@@ -1,0 +1,91 @@
+
+<html>
+<head>
+    <title>Hospital AI Drift Detection Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f7f6; }
+        h1 { color: #2c3e50; border-bottom: 2px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #2980b9; margin-top: 30px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; background-color: white; box-shadow: 0 1px 3px rgba(0,0,0,0.2); }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #ddd; }
+        th { background-color: #34495e; color: white; }
+        tr:hover { background-color: #f1f1f1; }
+        .alert { color: #e74c3c; font-weight: bold; }
+        .safe { color: #27ae60; font-weight: bold; }
+        .header-meta { color: #7f8c8d; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <h1>Hospital AI Drift Detection Report</h1>
+    <p class="header-meta">Generated: 2026-02-23 18:18:54</p>
+    <p class="header-meta">Phase 6: Monitoring and Governance</p>
+
+    <h2>1. Data Validation Checks (Current Stream)</h2>
+    <ul>
+<li class='alert'>⚠️ Found 251 missing values in current data stream!</li><li class='safe'>✅ All numeric ranges are within logical clinical bounds.</li>
+    </ul>
+    <h2>2. Statistical Feature Drift (Kolmogorov-Smirnov Test)</h2>
+    <p>Compares the distribution of the original training data (Reference) against the latest 5,000 hospital visits (Current). A p-value < 0.05 indicates statistically significant drift.</p>
+    <table>
+        <tr>
+            <th>Feature Name</th>
+            <th>Reference Mean</th>
+            <th>Current Mean</th>
+            <th>KS p-value</th>
+            <th>Status</th>
+        </tr>
+
+        <tr>
+            <td>age</td>
+            <td>44.83</td>
+            <td>44.94</td>
+            <td>0.1901</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+        <tr>
+            <td>length_of_stay_hours</td>
+            <td>19.56</td>
+            <td>19.66</td>
+            <td>0.6550</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+        <tr>
+            <td>billed_amount</td>
+            <td>20926.36</td>
+            <td>20813.16</td>
+            <td>0.4502</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+        <tr>
+            <td>visit_frequency</td>
+            <td>5.95</td>
+            <td>6.05</td>
+            <td>0.1969</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+        <tr>
+            <td>avg_los_per_patient</td>
+            <td>19.54</td>
+            <td>19.68</td>
+            <td>0.2111</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+        <tr>
+            <td>realization_rate</td>
+            <td>0.77</td>
+            <td>0.78</td>
+            <td>0.1746</td>
+            <td><span class='safe'>Stable</span></td>
+        </tr>
+    
+    </table>
+    
+    <h2>3. Governance Recommendations</h2>
+    <p>If significant drift is detected in high-impact features (e.g., <b>billed_amount</b> or <b>length_of_stay_hours</b>), Model B (Claim Outcomes) should be flagged for retraining using the latest trailing 12 months of hospital data to prevent revenue leakage due to shifting payer behaviors.</p>
+</body>
+</html>
