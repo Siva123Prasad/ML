@@ -6,7 +6,7 @@ from sklearn.preprocessing import LabelEncoder
 from imblearn.over_sampling import SMOTE
 from groq import Groq
 
-client = Groq(api_key="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")
+client = Groq(api_key="GROQ_API_KEY")
 rf_model = joblib.load(r'C:\Users\ADMIN\Documents\ML Self learn\ML\Hospital data\3 - DeploymentAPI\risk_model.pkl')
 
 # --- Rebuild X_test (same as your training notebook) ---
