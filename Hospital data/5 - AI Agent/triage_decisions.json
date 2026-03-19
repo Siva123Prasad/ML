@@ -1,0 +1,542 @@
+[
+  {
+    "patient_id": "P1000",
+    "features": {
+      "age": 35.0,
+      "length_of_stay_hours": 23.84,
+      "visit_frequency": 3.0,
+      "avg_los_per_patient": 33.79,
+      "days_since_registration": 92.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 3.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 0.0,
+      "city_enc": 0.0
+    },
+    "risk_score": 0.263,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "routine evaluation",
+      "schedule follow-up appointment",
+      "provide patient education"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.263, indicating that they can be treated on a non-urgent basis. The patient's chronic flag is 0, suggesting no underlying chronic conditions that would necessitate immediate attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1001",
+    "features": {
+      "age": 39.0,
+      "length_of_stay_hours": 24.14,
+      "visit_frequency": 7.0,
+      "avg_los_per_patient": 16.86,
+      "days_since_registration": 239.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 3.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 0.0,
+      "city_enc": 2.0
+    },
+    "risk_score": 0.309,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "immediate vital sign assessment",
+      "expedited laboratory testing",
+      "priority consultation with a physician"
+    ],
+    "triage_note": "The patient is classified as urgent due to their medium risk class and notable probability of high risk, with key factors including a chronic condition and recent frequent visits.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1002",
+    "features": {
+      "age": 28.0,
+      "length_of_stay_hours": 41.45,
+      "visit_frequency": 5.0,
+      "avg_los_per_patient": 28.5,
+      "days_since_registration": 45.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 2.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 1.0,
+      "city_enc": 4.0
+    },
+    "risk_score": 0.357,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "Monitor patient closely",
+      "Conduct thorough medical evaluation",
+      "Consider chronic condition screening"
+    ],
+    "triage_note": "The patient is classified as medium risk with a notable probability of being high risk, warranting urgent attention due to their visit frequency and length of stay. Close monitoring and a thorough evaluation are necessary to address potential underlying conditions.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1003",
+    "features": {
+      "age": 80.0,
+      "length_of_stay_hours": 31.93,
+      "visit_frequency": 7.0,
+      "avg_los_per_patient": 18.97,
+      "days_since_registration": 164.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 0.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 5.0
+    },
+    "risk_score": 0.361,
+    "predicted_class": "High",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "immediate vital sign assessment",
+      "expedited lab work",
+      "priority assignment of treatment room"
+    ],
+    "triage_note": "The patient's high predicted risk class and prolonged length of stay require urgent attention, with key risk factors including advanced age and frequent visits.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1004",
+    "features": {
+      "age": 27.0,
+      "length_of_stay_hours": 32.66,
+      "visit_frequency": 4.0,
+      "avg_los_per_patient": 30.94,
+      "days_since_registration": 292.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 2.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 1.0,
+      "city_enc": 3.0
+    },
+    "risk_score": 0.203,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "Monitor patient closely",
+      "Conduct thorough medical history review",
+      "Prepare for potential high-risk complications"
+    ],
+    "triage_note": "The patient is classified as medium risk with a notable 20.3% probability of being high risk, warranting urgent attention due to their chronic condition and recent frequent visits.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1005",
+    "features": {
+      "age": 35.0,
+      "length_of_stay_hours": 29.16,
+      "visit_frequency": 5.0,
+      "avg_los_per_patient": 20.29,
+      "days_since_registration": 33.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 5.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 5.0
+    },
+    "risk_score": 0.257,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.257, and their chronic flag is 1.0, indicating a need for ongoing management but not immediate emergency attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1006",
+    "features": {
+      "age": 70.0,
+      "length_of_stay_hours": 23.68,
+      "visit_frequency": 6.0,
+      "avg_los_per_patient": 17.54,
+      "days_since_registration": 190.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 4.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 0.0,
+      "city_enc": 0.0
+    },
+    "risk_score": 0.342,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "Monitor patient closely",
+      "Perform thorough medical evaluation",
+      "Consider hospital admission"
+    ],
+    "triage_note": "The patient is classified as medium risk with a notable probability of being high risk, warranting urgent attention due to their age and frequent visits, which may indicate underlying health concerns.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1007",
+    "features": {
+      "age": 32.0,
+      "length_of_stay_hours": 16.85,
+      "visit_frequency": 6.0,
+      "avg_los_per_patient": 18.3,
+      "days_since_registration": 229.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 2.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 4.0
+    },
+    "risk_score": 0.247,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.247, and their chronic flag is 1, indicating a need for ongoing management but not immediate emergency attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1008",
+    "features": {
+      "age": 60.0,
+      "length_of_stay_hours": 21.15,
+      "visit_frequency": 3.0,
+      "avg_los_per_patient": 21.6,
+      "days_since_registration": -9.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 1.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 0.0,
+      "city_enc": 3.0
+    },
+    "risk_score": 0.348,
+    "predicted_class": "High",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "immediate vital sign assessment",
+      "priority lab work",
+      "expedited consultation with physician"
+    ],
+    "triage_note": "The patient's high predicted risk class and prolonged length of stay require urgent attention, with key risk factors including frequent visits and extended average length of stay.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1009",
+    "features": {
+      "age": 35.0,
+      "length_of_stay_hours": 13.84,
+      "visit_frequency": 5.0,
+      "avg_los_per_patient": 26.6,
+      "days_since_registration": 84.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 1.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 1.0,
+      "city_enc": 4.0
+    },
+    "risk_score": 0.271,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.271, and their chronic flag is noted, but their current presentation does not indicate an emergent or urgent condition, so non-urgent care is appropriate.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1010",
+    "features": {
+      "age": 46.0,
+      "length_of_stay_hours": 10.77,
+      "visit_frequency": 4.0,
+      "avg_los_per_patient": 16.43,
+      "days_since_registration": -14.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 2.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 0.0
+    },
+    "risk_score": 0.255,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.255, and their chronic flag is 1, indicating a need for ongoing management but not immediate emergency attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1011",
+    "features": {
+      "age": 52.0,
+      "length_of_stay_hours": 6.22,
+      "visit_frequency": 6.0,
+      "avg_los_per_patient": 17.46,
+      "days_since_registration": 255.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 5.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 2.0
+    },
+    "risk_score": 0.277,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic disease management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.277, and their current condition does not require immediate attention, but they should be monitored and educated on managing their health.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1012",
+    "features": {
+      "age": 1.0,
+      "length_of_stay_hours": 8.48,
+      "visit_frequency": 7.0,
+      "avg_los_per_patient": 10.98,
+      "days_since_registration": 187.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 4.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 0.0,
+      "city_enc": 1.0
+    },
+    "risk_score": 0.374,
+    "predicted_class": "High",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "immediate vital sign assessment",
+      "priority lab work",
+      "expedited physician evaluation"
+    ],
+    "triage_note": "The patient is classified as high risk with a probability of 0.374, requiring urgent attention due to potential underlying conditions and a lengthy average length of stay, warranting close monitoring and prompt medical evaluation.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1013",
+    "features": {
+      "age": 26.0,
+      "length_of_stay_hours": 9.43,
+      "visit_frequency": 5.0,
+      "avg_los_per_patient": 17.26,
+      "days_since_registration": 255.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 3.0,
+      "visit_type_enc": 1.0,
+      "gender_enc": 1.0,
+      "city_enc": 3.0
+    },
+    "risk_score": 0.307,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "Monitor patient closely",
+      "Conduct thorough medical history",
+      "Prepare for potential escalation of care"
+    ],
+    "triage_note": "The patient is classified as medium risk with a notable probability of high risk, warranting urgent attention due to their visit frequency and length of stay. Close monitoring and thorough assessment are necessary to address potential underlying concerns.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1014",
+    "features": {
+      "age": 40.0,
+      "length_of_stay_hours": 32.13,
+      "visit_frequency": 4.0,
+      "avg_los_per_patient": 15.64,
+      "days_since_registration": 254.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 1.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 0.0,
+      "city_enc": 5.0
+    },
+    "risk_score": 0.298,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.298, and their chronic condition is being managed, so non_urgent care is appropriate. The patient's length of stay and visit frequency will be monitored to adjust the care plan as needed.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1015",
+    "features": {
+      "age": 37.0,
+      "length_of_stay_hours": 15.69,
+      "visit_frequency": 8.0,
+      "avg_los_per_patient": 14.74,
+      "days_since_registration": 127.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 1.0,
+      "department_enc": 2.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 0.0,
+      "city_enc": 1.0
+    },
+    "risk_score": 0.255,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.255, and their chronic flag is 1, indicating a need for ongoing management but not immediate emergency attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1016",
+    "features": {
+      "age": 62.0,
+      "length_of_stay_hours": 9.92,
+      "visit_frequency": 5.0,
+      "avg_los_per_patient": 24.81,
+      "days_since_registration": 79.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 5.0,
+      "chronic_flag": 0.0,
+      "department_enc": 0.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 0.0,
+      "city_enc": 1.0
+    },
+    "risk_score": 0.304,
+    "predicted_class": "Medium",
+    "urgency_level": "urgent",
+    "recommended_actions": [
+      "Monitor patient closely",
+      "Perform thorough medical evaluation",
+      "Consider chronic condition screening"
+    ],
+    "triage_note": "The patient is classified as medium risk with a notable probability of being high risk, warranting urgent attention due to their length of stay and visit frequency.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1017",
+    "features": {
+      "age": 36.0,
+      "length_of_stay_hours": 27.64,
+      "visit_frequency": 3.0,
+      "avg_los_per_patient": 16.85,
+      "days_since_registration": -15.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 6.0,
+      "chronic_flag": 1.0,
+      "department_enc": 1.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 1.0,
+      "city_enc": 0.0
+    },
+    "risk_score": 0.225,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.225, and their chronic flag is 1, indicating a need for ongoing management but not immediate emergency attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1018",
+    "features": {
+      "age": 33.0,
+      "length_of_stay_hours": 3.26,
+      "visit_frequency": 4.0,
+      "avg_los_per_patient": 21.4,
+      "days_since_registration": -24.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 6.0,
+      "chronic_flag": 1.0,
+      "department_enc": 5.0,
+      "visit_type_enc": 2.0,
+      "gender_enc": 0.0,
+      "city_enc": 0.0
+    },
+    "risk_score": 0.182,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient's condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on chronic condition management"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk being 0.182, and their chronic flag is 1.0, indicating a need for ongoing management but not requiring immediate attention.",
+    "status": "pending"
+  },
+  {
+    "patient_id": "P1019",
+    "features": {
+      "age": 34.0,
+      "length_of_stay_hours": 17.19,
+      "visit_frequency": 6.0,
+      "avg_los_per_patient": 14.69,
+      "days_since_registration": 189.0,
+      "visit_month": 11.0,
+      "visit_dayofweek": 6.0,
+      "chronic_flag": 0.0,
+      "department_enc": 4.0,
+      "visit_type_enc": 0.0,
+      "gender_enc": 0.0,
+      "city_enc": 2.0
+    },
+    "risk_score": 0.224,
+    "predicted_class": "Low",
+    "urgency_level": "non_urgent",
+    "recommended_actions": [
+      "Monitor patient condition",
+      "Schedule follow-up appointment",
+      "Provide patient education on self-care"
+    ],
+    "triage_note": "The patient is classified as low risk with a probability of high risk of 0.224, and their length of stay is relatively long at 17.19 hours, but their chronic flag is 0, indicating no chronic conditions, so they can be treated as non-urgent.",
+    "status": "pending"
+  }
+]
