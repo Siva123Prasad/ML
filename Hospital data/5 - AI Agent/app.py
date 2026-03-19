@@ -8,12 +8,12 @@ with open('triage_decisions.json', 'r') as f:
     patients = json.load(f)
 
 # Sort by urgency priority
-urgency_order = {"emergent": 0, "urgent": 1, "non_urgent": 2}
+urgency_order = {"Emergency": 0, "Urgent": 1, "Non_urgent": 2}
 patients = sorted(patients, key=lambda x: urgency_order.get(x["urgency_level"], 3))
 
 # Badge styling
 def urgency_badge(level):
-    colors = {"emergent": "🔴", "urgent": "🟡", "non_urgent": "🟢"}
+    colors = {"Emergency": "🔴", "Urgent": "🟡", "Non_urgent": "🟢"}
     return colors.get(level, "⚪")
 
 st.title("🏥 Hospital Triage Agent")
