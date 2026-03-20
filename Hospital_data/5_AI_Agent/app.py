@@ -7,9 +7,12 @@ st.set_page_config(page_title="Hospital Triage Agent", layout="wide")
 with open('triage_decisions.json', 'r') as f:
     patients = json.load(f)
 
-# Sort by urgency priority
+# Sort by urgency priority first, then by risk_score descending within each group
 urgency_order = {"Emergency": 0, "Urgent": 1, "Non_urgent": 2}
-patients = sorted(patients, key=lambda x: urgency_order.get(x["urgency_level"], 3))
+patients = sorted(
+    patients,
+    key=lambda x: (urgency_order.get(x["urgency_level"], 3), -x["risk_score"])
+)
 
 # Badge styling
 def urgency_badge(level):
