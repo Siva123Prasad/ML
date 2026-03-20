@@ -14,6 +14,7 @@ This project was developed as a comprehensive capstone project demonstrating ful
 5. [Repository structure](#repository-structure)
 6. [Local setup and installation](#local-setup-and-installation)
 7. [API usage and endpoints](#api-usage-and-endpoints)
+8. [Building an AI Agent to help Hospital Nurses](#triage-agent) [Updated on 20/03/2026]
 
 ---
 
@@ -158,4 +159,67 @@ Returns the status of the API for load balancers.
   "chronic_flag": 0
 }
 ```
+## Triage Agent
+<img width="2551" height="1096" alt="image" src="https://github.com/user-attachments/assets/2ac237f3-4a98-4eb5-99d0-1f606146e8b4" />
+
+### The Problem
+Emergency department nurses face a constant battle against time and information overload.
+Every shift, they manually review dozens of incoming patients — reading paper charts,
+cross-checking vitals, interpreting lab flags — and must decide in minutes who gets
+seen first. A wrong call can cost a life.
+
+> **AI triage systems achieve 75.7% accuracy vs 59.8% for nurses — a 26.9% improvement.**
+> *(Ivanov et al., 2021 — reviewed in PMC11158416)*
+>
+> Optimal arrival-to-triage assessment time is 10–15 min per patient.
+> AI assistance reduces wait time for first treatment from 17.9 min → 7.8 min (56% reduction).
+> *(PMC10666830 — team triage study, 2023)*
+>
+> AI-based voice documentation is 19% faster than manual methods,
+> and reduces mis-triage rates by 0.3–8.9%.
+> *(PMC12241827 — systematic review, 2025)*
+
+Current workflow:
+- Patient arrives → nurse manually reviews past records, vitals, complaints
+- Nurse assigns a triage level (1–5) based on experience and intuition
+- High patient load → cognitive fatigue → mistriage risk increases
+- Risk scores from ML models exist but are raw numbers — no explanation, no next steps
+
+---
+
+### How This Helps
+This triage agent sits on top of an existing ML risk model and converts raw risk
+scores into **actionable triage decisions** — in plain English, instantly.
+
+For every patient, the agent:
+- Reads structured patient data (age, vitals, visit history, department, etc.)
+- Runs an ML model to compute a risk probability
+- Passes the result to an LLM that generates:
+  - An **urgency level** (Emergent / Urgent / Non-urgent)
+  - **2–4 recommended clinical actions** (labs, monitoring, consults)
+  - A **1-sentence triage note** explaining *why* the patient is high risk
+
+---
+
+### How It Fits Into a Nurse's Day
+The key design principle: **no new data entry, no new login, no new mental load**.
+
+| Without Agent | With Agent |
+|---|---|
+| Nurse reads raw risk score: `0.87` | Nurse sees: 🔴 Emergency — *"High risk due to elevated HR, low BP, ambulance arrival"* |
+| Manually digs through 3–5 data fields | Pre-sorted patient queue, highest risk at top |
+| Decides actions from experience alone | Sees 3 suggested actions as checkboxes to approve |
+| No audit trail of triage decisions | Every decision logged (approved / escalated) |
+
+The nurse remains in control. The agent does the reasoning. The human approves.
+
+---
+
+### Tech Stack
+- **ML model**: Random Forest trained on hospital visit data (scikit-learn)
+- **LLM**: Llama 3.3 70B via Groq API
+- **UI**: Streamlit dashboard (pre-computed decisions, no live API call required)
+- **Precompute pipeline**: `precompute_triage.py` → `triage_decisions.json`
+
+
 
